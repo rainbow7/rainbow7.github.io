@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://coolcoder.fun">
-  <title>Yuming</title>
+  <title>Mac使用移动硬盘下载Android源码 | Yuming</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Yuming">
-<meta property="og:url" content="http://coolcoder.fun/index.html">
+  <meta name="description" content="别管看不看，额，主要看有没有时间：），先把Android源码搞下来。废话不多说，开搞。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac使用移动硬盘下载Android源码">
+<meta property="og:url" content="http://coolcoder.fun/2021/02/16/Mac%E4%BD%BF%E7%94%A8%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E4%B8%8B%E8%BD%BDAndroid%E6%BA%90%E7%A0%81/index.html">
 <meta property="og:site_name" content="Yuming">
+<meta property="og:description" content="别管看不看，额，主要看有没有时间：），先把Android源码搞下来。废话不多说，开搞。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-02-16T15:57:39.000Z">
+<meta property="article:modified_time" content="2021-02-16T16:10:04.135Z">
 <meta property="article:author" content="Yuming">
 <meta name="twitter:card" content="summary">
   
@@ -146,16 +150,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Mac使用移动硬盘下载Android源码" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Mac使用移动硬盘下载Android源码" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/16/Mac%E4%BD%BF%E7%94%A8%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E4%B8%8B%E8%BD%BDAndroid%E6%BA%90%E7%A0%81/">Mac使用移动硬盘下载Android源码</a>
+    <h1 class="article-title" itemprop="name">
+      Mac使用移动硬盘下载Android源码
     </h1>
   
 
@@ -169,7 +171,37 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>别管看不看，额，主要看有没有时间：），先把Android源码搞下来。废话不多说，开搞。</p>
-        
+<a id="more"></a>
+
+<p>无奈Mac的磁盘已经成天的提示不够用，只好使用移动硬盘来下载。我是专门弄了一块硬盘存放Android源码，这样的话比较省心。上来直接格式化为大小写敏感的分区，也就是（Mac OS扩展 区分大小写，日志式），为什么要区分大小写，主要是为了git的使用。这一步完成之后，开始安装<a target="_blank" rel="noopener" href="https://source.android.com/source/developing">repo</a>。</p>
+<p>安装repo</p>
+<ul>
+<li><code>mkdir ~/bin</code>  // 当前用户下创建bin目录</li>
+<li><code>PAHT=~/bin:$PATH</code>  // 加入到临时变量</li>
+<li><code>curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo</code>  // 下载repo到bin目录</li>
+<li><code>chmod a+x ~/bin/repo</code>  // 修改repo的权限</li>
+<li><code>cd /Volumes/硬盘的名字</code>  // 进入到要下载源码的目录</li>
+<li><code>mkdir aosp</code>  //创建工作空间，名字看自己喜好</li>
+<li><code>cd aosp</code>  // 进入到工作空间</li>
+</ul>
+<p>配置git，建议使用gmail邮箱</p>
+<ul>
+<li><code>git config --global user.name xxx</code></li>
+<li><code>git ocnfig --global user.email xxx@xxx.xx</code>配置清华源（可选）。不方便科学上网，或者为了提高速度，可以配置清华源。</li>
+<li>加一个环境变量，使用bash就在.bashrc，使用zsh就在.zshrc文件里加入<code>&#39;export REPO_URL=&#39;https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/&#39;</code> 初始化repo，同步代码</li>
+<li><code>cd /Volumes/aosp</code> 进入到第2步建立好的目录</li>
+<li><a target="_blank" rel="noopener" href="https://android.googlesource.com/platform/manifest">Android版本</a>，可以去这里看所有的分支。</li>
+<li><code>repo init &#39;$ repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-11.0.0_r9&#39; </code>这里选择当前最新版本分支</li>
+<li>初始化完成后，<code>repo sync</code> 等吧。</li>
+<li>下载完成后，大概占用110多G的空间。只能说，真TM大啊。</li>
+</ul>
+<blockquote>
+<p>其实大部的教程也是基于<a target="_blank" rel="noopener" href="https://source.android.com/source/downloading">官方教程</a>进行的拓展，加了很多图文，我觉得对于一个开发者来说，其实有些太过于详细了。</p>
+</blockquote>
+<blockquote>
+<p>特别鸣谢<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012528526/article/details/87994711">https://blog.csdn.net/u012528526/article/details/87994711</a><br><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844903832028184590">https://juejin.cn/post/6844903832028184590</a></p>
+</blockquote>
+
       
 
       
@@ -180,16 +212,24 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/16/Mac%E4%BD%BF%E7%94%A8%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E4%B8%8B%E8%BD%BDAndroid%E6%BA%90%E7%A0%81/">展开全文 >></a>
-        </p>
-      
 
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2021/02/12/Mac%E4%BD%BF%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mac使用Hexo+Github搭建个人博客</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -209,134 +249,14 @@
 
 
 
-
   
-    <article id="post-Mac使用Hexo-Github搭建个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/12/Mac%E4%BD%BF%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Mac使用Hexo+Github搭建个人博客</a>
-    </h1>
   
 
-        
-        <a href="/2021/02/12/Mac%E4%BD%BF%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
-  	<time datetime="2021-02-12T13:14:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>我是怎么来的？还是简单记录下我的出生吧。我的爸爸是<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>，它的自我介绍非常清晰，我就不废话啦。我的妈妈是<a target="_blank" rel="noopener" href="https://pages.github.com/">Github Pages</a>，点击即可了解，看过之后发现，其实就算只有妈妈，也是可以有我的。不过有了爸爸，会让我更好的成长。感谢你们！</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/12/Mac%E4%BD%BF%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-始" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/02/10/%E5%A7%8B/">始</a>
-    </h1>
   
 
-        
-        <a href="/2021/02/10/%E5%A7%8B/" class="archive-article-date">
-  	<time datetime="2021-02-10T11:56:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>当你觉得为时已晚时，恰恰是最早的时候。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/02/10/%E5%A7%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -359,8 +279,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
