@@ -16,9 +16,9 @@
     <url>/2021/02/16/Mac%E4%BD%BF%E7%94%A8%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E4%B8%8B%E8%BD%BDAndroid%E6%BA%90%E7%A0%81/</url>
     <content><![CDATA[<p>别管看不看，额，主要看有没有时间：），先把Android源码搞下来。废话不多说，开搞。</p>
 <a id="more"></a>
-<h3 id="创建磁盘分区"><a class="header-anchor" href="#创建磁盘分区">¶</a>创建磁盘分区</h3>
+<h1>创建磁盘分区</h1>
 <p>无奈Mac的磁盘已经成天的提示不够用，只好使用移动硬盘来下载。我是专门弄了一块硬盘存放Android源码，这样的话比较省心。上来直接格式化为大小写敏感的分区，也就是（Mac OS扩展 区分大小写，日志式），为什么要区分大小写，主要是为了git的使用。这一步完成之后，开始安装<a class="link"   href="https://source.android.com/source/developing" >repo<i class="fas fa-external-link-alt"></i></a>。</p>
-<h3 id="安装repo"><a class="header-anchor" href="#安装repo">¶</a>安装repo</h3>
+<h1>安装repo</h1>
 <ul>
 <li><code>mkdir ~/bin</code>  // 当前用户下创建bin目录</li>
 <li><code>PAHT=~/bin:$PATH</code>  // 加入到临时变量</li>
@@ -28,17 +28,17 @@
 <li><code>mkdir aosp</code>  //创建工作空间，名字看自己喜好</li>
 <li><code>cd aosp</code>  // 进入到工作空间</li>
 </ul>
-<h3 id="配置git，建议使用gmail邮箱"><a class="header-anchor" href="#配置git，建议使用gmail邮箱">¶</a>配置git，建议使用gmail邮箱</h3>
+<h1>配置git，建议使用gmail邮箱</h1>
 <ul>
 <li><code>git config --global user.name xxx</code></li>
 <li><code>git config --global user.email xxx@xxx.xx</code></li>
 </ul>
-<h3 id="配置清华源（可选）"><a class="header-anchor" href="#配置清华源（可选）">¶</a>配置清华源（可选）</h3>
+<h1>配置清华源（可选）</h1>
 <p>不方便科学上网，或者为了提高速度，可以配置清华源。</p>
 <ul>
 <li>加一个环境变量，使用bash就在.bashrc，使用zsh就在.zshrc文件里加入<code>'export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'</code></li>
 </ul>
-<h3 id="初始化repo，同步代码"><a class="header-anchor" href="#初始化repo，同步代码">¶</a>初始化repo，同步代码</h3>
+<h1>初始化repo，同步代码</h1>
 <ul>
 <li><code>cd /Volumes/aosp</code> 进入到第2步建立好的目录</li>
 <li><a class="link"   href="https://android.googlesource.com/platform/manifest" >Android版本<i class="fas fa-external-link-alt"></i></a>，可以去这里看所有的分支。</li>
@@ -57,6 +57,15 @@
 ]]></content>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>儿子语录</title>
+    <url>/2021/02/19/%E5%84%BF%E5%AD%90%E8%AF%AD%E5%BD%95/</url>
+    <content><![CDATA[<p>“你有什么忙吗？我来帮你。”</p>
+<a id="more"></a>]]></content>
+      <tags>
+        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -93,14 +102,5 @@
 <p>1.使用自定义域名，每次deploy后，域名失效。</p>
 <p>解决方法：当我们使用自定义域名后，其实是生成了一个文件CNAME，里面记录着我们的域名，当deploy后，会使用blog/source下的文件替换github仓库中的文件（暂且这么认为，真实的情况还没有验证），总之就是把CNAME文件给搞没了。找到问题之后，对症下药就好了，在source文件夹下新建一个CNAME文件，把我们域名写上就好了。这样每次deploy后，这个文件还会有，域名就可以正常使用了。</p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>儿子语录</title>
-    <url>/2021/02/19/%E5%84%BF%E5%AD%90%E8%AF%AD%E5%BD%95/</url>
-    <content><![CDATA[<p>“你有什么忙吗？我来帮你。”</p>
-<a id="more"></a>]]></content>
-      <tags>
-        <tag>随笔</tag>
-      </tags>
   </entry>
 </search>
