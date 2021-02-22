@@ -12,7 +12,7 @@ tags:
 
 [Xpote](https://keep.xpoet.cn/2020/11/%E4%BD%BF%E7%94%A8-Travis-CI-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/)老哥（应该不会是小姐姐吧）已经写了非常详细的教程了。这里就不再重复了。本博客的主题也是使用他（她）的。非常简洁、美观、实用。真的非常感谢！
 
-最后提一点要注意**.travis.yml**配置文件中`token`变量的值是，在Tarvis上面配置的`Environment Variables`的name。可能是我比较傻，当时用token值把这个替换了。结果部署的时候提示没权限.....
+最后提一点要注意`.travis.yml`配置文件中`token`变量的值是，是Tarvis系统上面配置的`Environment Variables`的name。可能是我比较傻，当时用token值把这个替换了。结果部署的时候提示没权限.....
 
 ![](/assets/blogImage/travis_config.png)
 
