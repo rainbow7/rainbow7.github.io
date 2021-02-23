@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -9,7 +9,7 @@
     
     <title>
         
-            使用CI部署博客 |
+            使用 CI 部署博客 |
         
         Xanadu
     </title>
@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"coolcoder.fun","root":"/","language":"cn","path":"search.xml"};
+    KEEP.hexo_config = {"hostname":"coolcoder.fun","root":"/","language":"zh-CN","path":"search.xml"};
     KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"code_copy":{"enable":true,"style":"mac"},"side_tools":{"enable":true},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.0"};
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days age","week":"%s weeks age","month":"%s months age","year":"%s years age"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
   </script>
 <meta name="generator" content="Hexo 5.3.0"></head>
 
@@ -59,7 +59,7 @@
                             <a class=""
                                href="/"
                             >
-                                HOME
+                                首页
                             </a>
                         </li>
                     
@@ -67,7 +67,7 @@
                             <a class=""
                                href="/archives"
                             >
-                                ARCHIVES
+                                归档
                             </a>
                         </li>
                     
@@ -75,7 +75,7 @@
                             <a class=""
                                href="/about"
                             >
-                                ABOUT
+                                关于
                             </a>
                         </li>
                     
@@ -102,17 +102,17 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/">HOME</a>
+                       href="/">首页</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/archives">ARCHIVES</a>
+                       href="/archives">归档</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/about">ABOUT</a>
+                       href="/about">关于</a>
                 </li>
             
         </ul>
@@ -134,7 +134,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">使用CI部署博客</span>
+            <span class="title-hover-animation">使用 CI 部署博客</span>
         </div>
 
         
@@ -173,9 +173,9 @@
         <div class="article-content markdown-body">
             <p>工欲善其事，必先利其器。</p>
 <a id="more"></a>
-<p>使用持续集成系统部署博客，会省去不少工作，也方便在没有hexo的环境下对博客内容进行修改。</p>
-<p><a class="link"   target="_blank" rel="noopener" href="https://keep.xpoet.cn/2020/11/%E4%BD%BF%E7%94%A8-Travis-CI-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/" >Xpote<i class="fas fa-external-link-alt"></i></a>老哥（应该不会是小姐姐吧）已经写了非常详细的教程了。这里就不再重复了。本博客的主题也是使用他（她）的。非常简洁、美观、实用。真的非常感谢！</p>
-<p>最后提一点要注意<code>.travis.yml</code>配置文件中<code>token</code>变量的值是，是Tarvis系统上面配置的<code>Environment Variables</code>的name。可能是我比较傻，当时用token值把这个替换了。结果部署的时候提示没权限…</p>
+<p>使用持续集成系统部署博客，会省去不少工作，也方便在没有 hexo 的环境下对博客内容进行修改。</p>
+<p><a class="link"   target="_blank" rel="noopener" href="https://keep.xpoet.cn/2020/11/%E4%BD%BF%E7%94%A8-Travis-CI-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">Xpote<i class="fas fa-external-link-alt"></i></a>老哥（应该不会是小姐姐吧）已经写了非常详细的教程了。这里就不再重复了。本博客的主题也是使用他（她）的。非常简洁、美观、实用。真的非常感谢！</p>
+<p>最后提一点要注意 <code>.travis.yml</code> 配置文件中 <code>token</code> 变量的值是，是 Tarvis 系统上面配置的 <code>Environment Variables</code> 的 name。可能是我比较傻，当时用 token 值把这个替换了。结果部署的时候提示没权限…</p>
 <p><img src="/assets/blogImage/travis_config.png" alt=""></p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">on:</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">xxx</span>         				<span class="comment"># 工作分支（博客源码的分支）</span></span><br><span class="line">  <span class="attr">strategy:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">provider:</span> <span class="string">pages</span></span><br><span class="line">  <span class="attr">skip_cleanup:</span> <span class="literal">true</span>            <span class="comment"># 跳过清理</span></span><br><span class="line">  <span class="attr">token:</span> <span class="string">$GH_TOKEN</span>              <span class="comment"># GitHub Token 变量</span></span><br><span class="line">  <span class="attr">keep_history:</span> <span class="literal">true</span>            <span class="comment"># 保持推送记录，以增量提交的方式</span></span><br><span class="line">  <span class="attr">local_dir:</span> <span class="string">public</span>             <span class="comment"># 需要推送到 gh-pages 分支的静态文件目录</span></span><br><span class="line">  <span class="attr">target_branch:</span> <span class="string">xxx</span>            <span class="comment"># 构建好的博客分支，也就是对外提供静态页面的分支</span></span><br></pre></td></tr></table></figure>
 
@@ -185,14 +185,14 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：使用CI部署博客</li>
-        <li>Post author：Yuming</li>
-        <li>Create time：2021-02-23 00:25:46</li>
+        <li>本文标题：使用 CI 部署博客</li>
+        <li>本文作者：Yuming</li>
+        <li>创建时间：2021-02-23 00:25:46</li>
         <li>
-            Post link：https://yum1ng.cn/2021/02/23/使用CI部署博客/
+            本文链接：https://yum1ng.cn/2021/02/23/使用CI部署博客/
         </li>
         <li>
-            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
         </li>
     </ul>
 </div>
@@ -211,7 +211,7 @@
                         >
                             <span class="title flex-center">
                                 <span class="post-nav-title-item">儿子语录</span>
-                                <span class="post-nav-item">Next posts</span>
+                                <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
                               <i class="fas fa-chevron-right"></i>
@@ -227,7 +227,7 @@
                 <div class="comments-container">
     <div id="comment-anchor"></div>
     <div class="comment-area-title">
-        <i class="fas fa-comments">&nbsp;Comments</i>
+        <i class="fas fa-comments">&nbsp;评论</i>
     </div>
     
 
@@ -247,7 +247,7 @@
                     avatar: 'wavatar',
                     enableQQ: true,
                     placeholder: '来了，不整几杯？',
-                    lang: 'cn'.toLowerCase()
+                    lang: 'zh-CN'.toLowerCase()
                 });
 
                 function getAuthor(language) {
@@ -326,18 +326,18 @@
             <div class="website-count info-item">
                 
                     <span id="busuanzi_container_site_uv">
-                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
                     </span>
                 
                 
                     <span id="busuanzi_container_site_pv">
-                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
                     </span>
                 
             </div>
         
         <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.0</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.0</a>
         </div>
     </div>
 </footer>
@@ -437,7 +437,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="Search..."
+                       placeholder="搜索..."
                        spellcheck="false"
                        type="search"
                        class="search-input"

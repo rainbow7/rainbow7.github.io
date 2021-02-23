@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -9,7 +9,7 @@
     
     <title>
         
-            Mac使用Hexo+Github搭建个人博客 |
+            Mac 使用 Hexo+Github 搭建个人博客 |
         
         Xanadu
     </title>
@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"coolcoder.fun","root":"/","language":"cn","path":"search.xml"};
+    KEEP.hexo_config = {"hostname":"coolcoder.fun","root":"/","language":"zh-CN","path":"search.xml"};
     KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"code_copy":{"enable":true,"style":"mac"},"side_tools":{"enable":true},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.0"};
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days age","week":"%s weeks age","month":"%s months age","year":"%s years age"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
   </script>
 <meta name="generator" content="Hexo 5.3.0"></head>
 
@@ -59,7 +59,7 @@
                             <a class=""
                                href="/"
                             >
-                                HOME
+                                首页
                             </a>
                         </li>
                     
@@ -67,7 +67,7 @@
                             <a class=""
                                href="/archives"
                             >
-                                ARCHIVES
+                                归档
                             </a>
                         </li>
                     
@@ -75,7 +75,7 @@
                             <a class=""
                                href="/about"
                             >
-                                ABOUT
+                                关于
                             </a>
                         </li>
                     
@@ -102,17 +102,17 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/">HOME</a>
+                       href="/">首页</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/archives">ARCHIVES</a>
+                       href="/archives">归档</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/about">ABOUT</a>
+                       href="/about">关于</a>
                 </li>
             
         </ul>
@@ -134,7 +134,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">Mac使用Hexo+Github搭建个人博客</span>
+            <span class="title-hover-animation">Mac 使用 Hexo+Github 搭建个人博客</span>
         </div>
 
         
@@ -171,56 +171,56 @@
         
 
         <div class="article-content markdown-body">
-            <p>我是怎么来的？还是简单记录下我的出生吧。我的爸爸是<a class="link"   target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" >Hexo<i class="fas fa-external-link-alt"></i></a>，它的自我介绍非常清晰，我就不废话啦。我的妈妈是<a class="link"   target="_blank" rel="noopener" href="https://pages.github.com/" >Github Pages<i class="fas fa-external-link-alt"></i></a>，点击即可了解，看过之后发现，其实就算只有妈妈，也是可以有我的。不过有了爸爸，会让我更好的成长。感谢你们！</p>
+            <p>我是怎么来的？还是简单记录下我的出生吧。我的爸爸是<a class="link"   target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo<i class="fas fa-external-link-alt"></i></a>，它的自我介绍非常清晰，我就不废话啦。我的妈妈是<a class="link"   target="_blank" rel="noopener" href="https://pages.github.com/">Github Pages<i class="fas fa-external-link-alt"></i></a>，点击即可了解，看过之后发现，其实就算只有妈妈，也是可以有我的。不过有了爸爸，会让我更好的成长。感谢你们！</p>
 <a id="more"></a>
 <p>从上面也了解到，其实我是由“两部分组成的”。下面就分别介绍这两个部分。不会很详细的介绍，只会包括流程。因为在它们各自的官网首页已经有很详细的讲解了。本文大多也是摘抄自官网。</p>
-<h3 id="Hexo静态博客工具的安装">Hexo静态博客工具的安装</h3>
-<h5 id="安装Node-js，使用以下命令检查是否安装成功">安装<a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/" >Node.js<i class="fas fa-external-link-alt"></i></a>，使用以下命令检查是否安装成功</h5>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v &#x2F;&#x2F; 正常情况下，会有版本号输出</span><br><span class="line">npm -v &#x2F;&#x2F; npm是nodejs的包管理器，安装Hexo需要使用</span><br></pre></td></tr></table></figure>
-<h5 id="安装Hexo">安装<a class="link"   target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" >Hexo<i class="fas fa-external-link-alt"></i></a></h5>
-<p>完成第一步后，安装Hexo就很简单了， 终端中输入<code>npm install hexo-cli -g</code>。完成后输入以下命令生成本地页面</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog  &#x2F;&#x2F; 初始化博客文件夹blog，可改为其他</span><br><span class="line">cd blog  &#x2F;&#x2F; 进入到 blog 文件夹</span><br><span class="line">npm install  &#x2F;&#x2F; 安装</span><br><span class="line">hexo new 文件名 &#x2F;&#x2F; 创建新的文章，文章会以markdown格式保存在blog&#x2F;source&#x2F;_post中</span><br><span class="line">hexo server  &#x2F;&#x2F; 启动本地服务，这步执行完成之后，就可以在本地预览页面了，链接会在终端中输出，按住ctrl就可以点击查看了</span><br></pre></td></tr></table></figure>
-<p>经过以上两个步骤就完成了Hexo的安装，已经可以在本地浏览生成的页面了。下面将介绍如何配置Github Pages，以便将我们的页面上传到Github。</p>
-<h3 id="Github-Pages的配置">Github Pages的配置</h3>
-<p>Github当然是依赖Git的了，所以要先安装好Git工具。</p>
-<h5 id="安装Git">安装<a class="link"   target="_blank" rel="noopener" href="https://git-scm.com/" >Git<i class="fas fa-external-link-alt"></i></a></h5>
+<h3 id="Hexo 静态博客工具的安装">Hexo 静态博客工具的安装</h3>
+<h4 id="安装 Node-js，使用以下命令检查是否安装成功">安装<a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/">Node.js<i class="fas fa-external-link-alt"></i></a>，使用以下命令检查是否安装成功</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v &#x2F;&#x2F; 正常情况下，会有版本号输出</span><br><span class="line">npm -v &#x2F;&#x2F; npm 是 nodejs 的包管理器，安装 Hexo 需要使用</span><br></pre></td></tr></table></figure>
+<h4 id="安装 Hexo">安装<a class="link"   target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo<i class="fas fa-external-link-alt"></i></a></h4>
+<p>完成第一步后，安装 Hexo 就很简单了， 终端中输入<code>npm install hexo-cli -g</code>。完成后输入以下命令生成本地页面</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog  &#x2F;&#x2F; 初始化博客文件夹 blog，可改为其他</span><br><span class="line">cd blog  &#x2F;&#x2F; 进入到 blog 文件夹</span><br><span class="line">npm install  &#x2F;&#x2F; 安装</span><br><span class="line">hexo new 文件名 &#x2F;&#x2F; 创建新的文章，文章会以 markdown 格式保存在 blog&#x2F;source&#x2F;_post 中</span><br><span class="line">hexo server  &#x2F;&#x2F; 启动本地服务，这步执行完成之后，就可以在本地预览页面了，链接会在终端中输出，按住 ctrl 就可以点击查看了</span><br></pre></td></tr></table></figure>
+<p>经过以上两个步骤就完成了 Hexo 的安装，已经可以在本地浏览生成的页面了。下面将介绍如何配置 Github Pages ，以便将我们的页面上传到 Github 。</p>
+<h3 id="Github-Pages 的配置">Github Pages 的配置</h3>
+<p>Github 当然是依赖 Git 的了，所以要先安装好 <a class="link"   target="_blank" rel="noopener" href="https://git-scm.com/">Git 工具<i class="fas fa-external-link-alt"></i></a>。</p>
+<h4 id="安装 Git">安装 Git</h4>
 <p>安装完成后终端输入<code>git version</code>，有版本号输出表示安装成功。</p>
-<h5 id="配置Github-Pages">配置Github Pages</h5>
-<p>首先需要开通Github，然后是设置SSH key，如果没有的话。</p>
-<h5 id="配置多个SSH-Key">配置多个SSH Key</h5>
-<p>这里简单说下配置多个SSH Key。比如公司的Git Lab仓库与我们的自己的Github分别使用不同的配置。</p>
-<p>1.生成新的密钥  <code>ssh-keygen -t rsa -C email // 将email替换为你要使用的email，回车后输入保存的文件名，如id_rsa_github</code></p>
-<p>2.进入.shh文件夹，创建config文件  <code>vi config // 生成同时编辑config文件</code></p>
-<p>3.为不同的域配置不同的SSH key</p>
+<h4 id="配置 Github-Pages">配置 Github Pages</h4>
+<p>首先需要开通 Github，然后是设置 SSH key，如果没有的话。</p>
+<h4 id="配置多个 SSH-Key">配置多个 SSH Key</h4>
+<p>这里简单说下配置多个 SSH Key。比如公司的 Git Lab 仓库与我们的自己的 Github 分别使用不同的配置。</p>
+<p>1. 生成新的密钥  <code>ssh-keygen -t rsa -C email // 将 email 替换为你要使用的 email，回车后输入保存的文件名，如 id_rsa_github</code></p>
+<p>2. 进入.shh 文件夹，创建 config 文件<code>vi config // 生成同时编辑 config 文件</code></p>
+<p>3. 为不同的域配置不同的 SSH key</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Host xxx.com &#x2F;&#x2F; 域名</span><br><span class="line">User email &#x2F;&#x2F; 所配置的邮件地址</span><br><span class="line">PreferredAuthentications publickey &#x2F;&#x2F; 密钥类型，固定公钥</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa_xxx &#x2F;&#x2F; key 文件</span><br><span class="line">#-----------------------------------------------------</span><br><span class="line">Host xxx.com</span><br><span class="line">User email</span><br><span class="line">PreferredAuthentications publickey</span><br><span class="line">IdentityFile ~&#x2F;.ssh&#x2F;id_rsa_xxx</span><br></pre></td></tr></table></figure>
-<h5 id="创建博客仓库">创建博客仓库</h5>
-<p>需要注意的是Repository name，<font color=#ff0000> <a class="link"   target="_blank" rel="noopener" href="http://xn--username-wg0mv26l2m8i.github.io" >必须为username.github.io<i class="fas fa-external-link-alt"></i></a>。username为你的Github的用户名。</font>创建完成以后。点击此Repository的Setting，向下滚动，找到Github Pages，目前Github仓库主分支名称已经改了main，我是习惯性的在创建时将分支名改为了master。此时如果在项目下新建一个名为index.html的文件，就可以通过https://username.github.io/ 来访问了。</p>
-<h3 id="关联Hexo与Github-Pages">关联Hexo与Github Pages</h3>
-<p>我们已经分别准备好了Hexo与Github Pages。是时候将它们关联起来了。</p>
-<h5 id="配置部署脚本">配置部署脚本</h5>
-<p>进入到已经使用Hexo初始化好的博客文件夹（假定叫blog），打开_config.yml文件，向下滚动，找到deploy，加入如下配置，<font color=#ff0000>要注意空格必须要有</font></p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&#x27;git@github.com:username/username.github.io.git&#x27;</span> <span class="string">//</span> <span class="string">也就是平时clone仓库时的地址</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">&#x27;master&#x27;</span> <span class="string">//</span> <span class="string">博客所在的分支，据说目前只支持主分支，这个没有做验证</span></span><br></pre></td></tr></table></figure>
-<h5 id="安装deploy插件">安装deploy插件</h5>
-<p>终端执行<code>npm install hexo-deployer-git -save</code>完成后就可以使用Hexo进行部署了。以下是几个常用的命令，更多的命令可以通过hexo help查看。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  &#x2F;&#x2F; 清除，如果新的改动没有变化，可以试下，通常不需要</span><br><span class="line">hexo g(generate)  &#x2F;&#x2F; 生成页面</span><br><span class="line">hexo s(server)  &#x2F;&#x2F; 开启本地服务，可以先在本地预览</span><br><span class="line">hexo d(deploy)  &#x2F;&#x2F; 发布，成功的话，过一会儿，通常10几秒，打开https:&#x2F;&#x2F;username.github.io&#x2F;就能看到自己写的文章了</span><br><span class="line">hexo g -d  &#x2F;&#x2F; 组合命令，生成+发布</span><br></pre></td></tr></table></figure>
+<h4 id="创建博客仓库">创建博客仓库</h4>
+<p>需要注意的是 Repository name，<font color=#ff0000> 必须为 username.github.io。username 为你的 Github 的用户名。</font>创建完成以后。点击此 Repository 的 Setting，向下滚动，找到 Github Pages，目前 Github 仓库主分支名称已经改了 main，我是习惯性的在创建时将分支名改为了 master。此时如果在项目下新建一个名为 index.html 的文件，就可以通过 https://username.github.io/ 来访问了。</p>
+<h3 id="关联 Hexo 与 Github-Pages">关联 Hexo 与 Github Pages</h3>
+<p>我们已经分别准备好了 Hexo 与 Github Pages。是时候将它们关联起来了。</p>
+<h4 id="配置部署脚本">配置部署脚本</h4>
+<p>进入到已经使用 Hexo 初始化好的博客文件夹（假定叫 blog），打开 _config.yml 文件，向下滚动，找到 deploy，加入如下配置，<font color=#ff0000>要注意空格必须要有</font></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">&#x27;git@github.com:username/username.github.io.git&#x27;</span> <span class="string">//</span> <span class="string">也就是平时 clone 仓库时的地址 </span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">&#x27;master&#x27;</span> <span class="string">//</span> <span class="string"> 博客所在的分支，据说目前只支持主分支，这个没有做验证</span></span><br></pre></td></tr></table></figure>
+<h4 id="安装 deploy 插件">安装 deploy 插件</h4>
+<p>终端执行 <code>npm install hexo-deployer-git -save</code> 完成后就可以使用 Hexo 进行部署了。以下是几个常用的命令，更多的命令可以通过 hexo help 查看。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">hexo clean  &#x2F;&#x2F; 清除，如果新的改动没有变化，可以试下，通常不需要</span><br><span class="line">hexo g(generate)  &#x2F;&#x2F; 生成页面</span><br><span class="line">hexo s(server)  &#x2F;&#x2F; 开启本地服务，可以先在本地预览</span><br><span class="line">hexo d(deploy)  &#x2F;&#x2F; 发布，成功的话，过一会儿，通常 10 几秒，打开 https:&#x2F;&#x2F;username.github.io&#x2F; 就能看到自己写的文章了</span><br><span class="line">hexo g -d  &#x2F;&#x2F; 组合命令，生成 + 发布</span><br></pre></td></tr></table></figure>
 <p>现在已经可以开始写一些东西，并且方便的发布了。如果你想自定义主题，自定义域名，可以接着往下看。</p>
-<h5 id="更换主题">更换主题</h5>
-<p>找到自己的喜欢的<a class="link"   target="_blank" rel="noopener" href="https://hexo.io/themes/" >主题<i class="fas fa-external-link-alt"></i></a>，clone到blog文件夹下的themes文件夹，并修改_config.yml中的theme配置。是不是很简单。</p>
-<h5 id="配置个性域名">配置个性域名</h5>
-<p>以阿里云为例，点击添加记录，按以下配置添加，把记录值改为你的地址。然后在Repository添加一个文件CNAME，文件的内容是你的域名。最后在Repository的Setting中，Github Pages那里添加你的域名，点击保存。现在已经可以使用你自己的域名来访问站点了。各配置如下图所示<br>
+<h4 id="更换主题">更换主题</h4>
+<p>找到自己的喜欢的 <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/themes/"> 主题<i class="fas fa-external-link-alt"></i></a>，clone 到 blog 文件夹下的 themes 文件夹，并修改 _config.yml 中的 theme 配置。是不是很简单。</p>
+<h4 id="配置个性域名">配置个性域名</h4>
+<p>以阿里云为例，点击添加记录，按以下配置添加，把记录值改为你的地址。然后在 Repository 添加一个文件 CNAME ，文件的内容是你的域名。最后在 Repository 的 Setting 中，Github Pages 那里添加你的域名，点击保存。现在已经可以使用你自己的域名来访问站点了。各配置如下图所示<br>
 <img src="/assets/blogImage/ali_domain_setting.png" alt=""></p>
-<h3 id="替换Markdown插件">替换Markdown插件</h3>
-<p>hexo默认的markdown插件为<code>hexo-renderer-marked</code>不是很给力。所以将它换为更强力的<a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-markdown-it" >hexo-renderer-markdown-it<i class="fas fa-external-link-alt"></i></a>，至于怎么个强力法，用了才知道。先安利一个非常简介好用的markdwon编辑器<a class="link"   target="_blank" rel="noopener" href="https://typora.io/" >typora<i class="fas fa-external-link-alt"></i></a>。下面简单记录下替换步骤。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm un hexo-renderer-marked --save  # 卸载原来的</span><br><span class="line">$ npm i hexo-renderer-markdown-it --save  #安装新的</span><br></pre></td></tr></table></figure>
+<h3 id="替换 Markdown 插件">替换 Markdown 插件</h3>
+<p>hexo 默认的 markdown 插件为 <code>hexo-renderer-marked</code> 不是很给力。所以将它换为更强力的<a class="link"   target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-markdown-it">hexo-renderer-markdown-it<i class="fas fa-external-link-alt"></i></a>，至于怎么个强力法，用了才知道。先安利一个非常简介好用的 markdwon 编辑器 <a class="link"   target="_blank" rel="noopener" href="https://typora.io/">typora<i class="fas fa-external-link-alt"></i></a> 。下面简单记录下替换步骤。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd blog # 进入到 Hexo 主目录</span><br><span class="line">$ npm un hexo-renderer-marked --save  # 卸载原来的</span><br><span class="line">$ npm i hexo-renderer-markdown-it --save  #安装新的</span><br></pre></td></tr></table></figure>
 <p>配置，具体的含意可以自行学习</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">render:</span></span><br><span class="line">    <span class="attr">html:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">breaks:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">linkify:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">typographer:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">quotes:</span> <span class="string">&#x27;“”‘’&#x27;</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-abbr</span>      <span class="comment">#缩写插件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-footnote</span>  <span class="comment">#脚注插件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-ins</span>       <span class="comment">#插入插件（下划线插件）</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-sub</span>       <span class="comment">#下标插件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-sup</span>       <span class="comment">#上标插件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-emoji</span>     <span class="comment">#emoji插件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-container</span> <span class="comment">#内容块</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-deflist</span>   <span class="comment">#Definition list (&lt;dl&gt;) tag</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-ins</span>       <span class="comment">#++inserted++ =&gt; &lt;ins&gt;inserted&lt;/ins&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-mark</span>      <span class="comment">#&lt;mark&gt; tag</span></span><br><span class="line">  <span class="attr">anchors:</span>                  <span class="comment">#锚</span></span><br><span class="line">    <span class="attr">level:</span> <span class="number">2</span>                <span class="comment">#最小对哪一级标题生效，对应H1-H6</span></span><br><span class="line">    <span class="attr">collisionSuffix:</span> <span class="string">&#x27;v&#x27;</span></span><br><span class="line">    <span class="attr">permalink:</span> <span class="literal">false</span>        <span class="comment">#链接，如果设置为true，点击后，会将其滚动到页面的最上方，</span></span><br><span class="line">    <span class="attr">permalinkClass:</span> <span class="string">header-anchor</span></span><br><span class="line">    <span class="attr">permalinkSymbol:</span> <span class="string">¶</span>      <span class="comment">#锚的标记，说的直白点儿，就是你点击这个东西，会发生上面所说的滚动</span></span><br></pre></td></tr></table></figure>
-<p>这里说一下<code>anchors</code>，锚，开始时没搞清楚，还给作者提了个<a class="link"   target="_blank" rel="noopener" href="https://github.com/XPoet/hexo-theme-keep/issues/64" >Issues<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Markdown-it config</span></span><br><span class="line"><span class="attr">markdown:</span></span><br><span class="line">  <span class="attr">render:</span></span><br><span class="line">    <span class="attr">html:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">xhtmlOut:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">breaks:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">linkify:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">typographer:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">quotes:</span> <span class="string">&#x27;“”‘’&#x27;</span></span><br><span class="line">  <span class="attr">plugins:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-abbr</span>      <span class="comment"># 缩写插件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-footnote</span>  <span class="comment"># 脚注插件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-ins</span>       <span class="comment"># 插入插件（下划线插件）</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-sub</span>       <span class="comment"># 下标插件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-sup</span>       <span class="comment"># 上标插件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-emoji</span>     <span class="comment">#emoji 插件</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-container</span> <span class="comment"># 内容块</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-deflist</span>   <span class="comment">#Definition list (&lt;dl&gt;) tag</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-ins</span>       <span class="comment">#++inserted++ =&gt; &lt;ins&gt;inserted&lt;/ins&gt;</span></span><br><span class="line">    <span class="bullet">-</span> <span class="string">markdown-it-mark</span>      <span class="comment">#&lt;mark&gt; tag</span></span><br><span class="line">  <span class="attr">anchors:</span>                  <span class="comment"># 锚</span></span><br><span class="line">    <span class="attr">level:</span> <span class="number">2</span>                <span class="comment"># 最小对哪一级标题生效，对应 H1-H6</span></span><br><span class="line">    <span class="attr">collisionSuffix:</span> <span class="string">&#x27;v&#x27;</span></span><br><span class="line">    <span class="attr">permalink:</span> <span class="literal">false</span>        <span class="comment"># 链接，如果设置为 true，点击后，会将其滚动到页面的最上方，</span></span><br><span class="line">    <span class="attr">permalinkClass:</span> <span class="string">header-anchor</span></span><br><span class="line">    <span class="attr">permalinkSymbol:</span> <span class="string">¶</span>      <span class="comment"># 锚的标记，说的直白点儿，就是你点击这个东西，会发生上面所说的滚动</span></span><br></pre></td></tr></table></figure>
+<p>这里说一下<code>anchors</code>，锚，开始时没搞清楚，还给作者提了个<a class="link"   target="_blank" rel="noopener" href="https://github.com/XPoet/hexo-theme-keep/issues/64">Issues<i class="fas fa-external-link-alt"></i></a></p>
 <h3 id="FAQ">FAQ</h3>
 <blockquote>
-<p>记录使用hexo过程中遇到的一些问题，为了保持整个目录的整洁，就不新建文章了。</p>
+<p>记录使用 hexo 过程中遇到的一些问题，为了保持整个目录的整洁，就不新建文章了。</p>
 </blockquote>
-<h5 id="deploy后，域名失效">deploy后，域名失效</h5>
-<p>解决方法：当我们使用自定义域名后，其实是生成了一个文件CNAME，里面记录着我们的域名，当deploy后，会使用最新生成的文件替换github仓库中的文件，会把CNAME文件给搞没。找到问题之后，对症下药就好了，在source文件夹下新建一个CNAME文件，把我们域名写上就好了。这样每次deploy后，这个文件还会有，域名就可以正常使用了。</p>
+<h4 id="deploy 后，域名失效">deploy 后，域名失效</h4>
+<p>解决方法：当我们使用自定义域名后，其实是生成了一个文件 CNAME，里面记录着我们的域名，当 deploy 后，会使用最新生成的文件替换 github 仓库中的文件，会把 CNAME 文件给搞没。找到问题之后，对症下药就好了，在 source 文件夹下新建一个 CNAME 文件，把我们域名写上就好了。这样每次 deploy 后，这个文件还会有，域名就可以正常使用了。</p>
 
         </div>
 
@@ -228,14 +228,14 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Mac使用Hexo+Github搭建个人博客</li>
-        <li>Post author：Yuming</li>
-        <li>Create time：2021-02-12 21:14:51</li>
+        <li>本文标题：Mac 使用 Hexo+Github 搭建个人博客</li>
+        <li>本文作者：Yuming</li>
+        <li>创建时间：2021-02-12 21:14:51</li>
         <li>
-            Post link：https://yum1ng.cn/2021/02/12/Mac使用Hexo-Github搭建个人博客/
+            本文链接：https://yum1ng.cn/2021/02/12/Mac使用Hexo-Github搭建个人博客/
         </li>
         <li>
-            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
         </li>
     </ul>
 </div>
@@ -255,8 +255,8 @@
                               <i class="fas fa-chevron-left"></i>
                             </span>
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Mac使用移动硬盘下载Android源码</span>
-                                <span class="post-nav-item">Prev posts</span>
+                                <span class="post-nav-title-item">Mac 使用移动硬盘下载 Android 源码</span>
+                                <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
                     </div>
@@ -269,7 +269,7 @@
                         >
                             <span class="title flex-center">
                                 <span class="post-nav-title-item">始</span>
-                                <span class="post-nav-item">Next posts</span>
+                                <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
                               <i class="fas fa-chevron-right"></i>
@@ -285,7 +285,7 @@
                 <div class="comments-container">
     <div id="comment-anchor"></div>
     <div class="comment-area-title">
-        <i class="fas fa-comments">&nbsp;Comments</i>
+        <i class="fas fa-comments">&nbsp;评论</i>
     </div>
     
 
@@ -305,7 +305,7 @@
                     avatar: 'wavatar',
                     enableQQ: true,
                     placeholder: '来了，不整几杯？',
-                    lang: 'cn'.toLowerCase()
+                    lang: 'zh-CN'.toLowerCase()
                 });
 
                 function getAuthor(language) {
@@ -384,18 +384,18 @@
             <div class="website-count info-item">
                 
                     <span id="busuanzi_container_site_uv">
-                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
                     </span>
                 
                 
                     <span id="busuanzi_container_site_pv">
-                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
                     </span>
                 
             </div>
         
         <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.0</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.0</a>
         </div>
     </div>
 </footer>
@@ -473,7 +473,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">Hexo静态博客工具的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Node-js%EF%BC%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="nav-number">1.0.1.</span> <span class="nav-text">安装Node.js，使用以下命令检查是否安装成功</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Hexo"><span class="nav-number">1.0.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github-Pages%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">Github Pages的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85Git"><span class="nav-number">2.0.1.</span> <span class="nav-text">安装Git</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEGithub-Pages"><span class="nav-number">2.0.2.</span> <span class="nav-text">配置Github Pages</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AASSH-Key"><span class="nav-number">2.0.3.</span> <span class="nav-text">配置多个SSH Key</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BB%93%E5%BA%93"><span class="nav-number">2.0.4.</span> <span class="nav-text">创建博客仓库</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94Hexo%E4%B8%8EGithub-Pages"><span class="nav-number">3.</span> <span class="nav-text">关联Hexo与Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%83%A8%E7%BD%B2%E8%84%9A%E6%9C%AC"><span class="nav-number">3.0.1.</span> <span class="nav-text">配置部署脚本</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E5%AE%89%E8%A3%85deploy%E6%8F%92%E4%BB%B6"><span class="nav-number">3.0.2.</span> <span class="nav-text">安装deploy插件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">3.0.3.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%AA%E6%80%A7%E5%9F%9F%E5%90%8D"><span class="nav-number">3.0.4.</span> <span class="nav-text">配置个性域名</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2Markdown%E6%8F%92%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">替换Markdown插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FAQ"><span class="nav-number">5.</span> <span class="nav-text">FAQ</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#deploy%E5%90%8E%EF%BC%8C%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88"><span class="nav-number">5.0.1.</span> <span class="nav-text">deploy后，域名失效</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Hexo%20%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%E5%B7%A5%E5%85%B7%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">Hexo 静态博客工具的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%20Node-js%EF%BC%8C%E4%BD%BF%E7%94%A8%E4%BB%A5%E4%B8%8B%E5%91%BD%E4%BB%A4%E6%A3%80%E6%9F%A5%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="nav-number">1.1.</span> <span class="nav-text">安装Node.js，使用以下命令检查是否安装成功</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%20Hexo"><span class="nav-number">1.2.</span> <span class="nav-text">安装Hexo</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Github-Pages%20%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">Github Pages 的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%20Git"><span class="nav-number">2.1.</span> <span class="nav-text">安装 Git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%20Github-Pages"><span class="nav-number">2.2.</span> <span class="nav-text">配置 Github Pages</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E5%A4%9A%E4%B8%AA%20SSH-Key"><span class="nav-number">2.3.</span> <span class="nav-text">配置多个 SSH Key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%BB%93%E5%BA%93"><span class="nav-number">2.4.</span> <span class="nav-text">创建博客仓库</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B3%E8%81%94%20Hexo%20%E4%B8%8E%20Github-Pages"><span class="nav-number">3.</span> <span class="nav-text">关联 Hexo 与 Github Pages</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E9%83%A8%E7%BD%B2%E8%84%9A%E6%9C%AC"><span class="nav-number">3.1.</span> <span class="nav-text">配置部署脚本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%20deploy%20%E6%8F%92%E4%BB%B6"><span class="nav-number">3.2.</span> <span class="nav-text">安装 deploy 插件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">3.3.</span> <span class="nav-text">更换主题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E4%B8%AA%E6%80%A7%E5%9F%9F%E5%90%8D"><span class="nav-number">3.4.</span> <span class="nav-text">配置个性域名</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%BF%E6%8D%A2%20Markdown%20%E6%8F%92%E4%BB%B6"><span class="nav-number">4.</span> <span class="nav-text">替换 Markdown 插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FAQ"><span class="nav-number">5.</span> <span class="nav-text">FAQ</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#deploy%20%E5%90%8E%EF%BC%8C%E5%9F%9F%E5%90%8D%E5%A4%B1%E6%95%88"><span class="nav-number">5.1.</span> <span class="nav-text">deploy 后，域名失效</span></a></li></ol></li></ol>
     </div>
 </div>
         </aside>
@@ -495,7 +495,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="Search..."
+                       placeholder="搜索..."
                        spellcheck="false"
                        type="search"
                        class="search-input"

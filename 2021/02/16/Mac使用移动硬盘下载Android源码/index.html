@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cn">
+<html lang="zh-CN">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -9,7 +9,7 @@
     
     <title>
         
-            Mac使用移动硬盘下载Android源码 |
+            Mac 使用移动硬盘下载 Android 源码 |
         
         Xanadu
     </title>
@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"coolcoder.fun","root":"/","language":"cn","path":"search.xml"};
+    KEEP.hexo_config = {"hostname":"coolcoder.fun","root":"/","language":"zh-CN","path":"search.xml"};
     KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"code_copy":{"enable":true,"style":"mac"},"side_tools":{"enable":true},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.0"};
-    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days age","week":"%s weeks age","month":"%s months age","year":"%s years age"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
   </script>
 <meta name="generator" content="Hexo 5.3.0"></head>
 
@@ -59,7 +59,7 @@
                             <a class=""
                                href="/"
                             >
-                                HOME
+                                首页
                             </a>
                         </li>
                     
@@ -67,7 +67,7 @@
                             <a class=""
                                href="/archives"
                             >
-                                ARCHIVES
+                                归档
                             </a>
                         </li>
                     
@@ -75,7 +75,7 @@
                             <a class=""
                                href="/about"
                             >
-                                ABOUT
+                                关于
                             </a>
                         </li>
                     
@@ -102,17 +102,17 @@
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/">HOME</a>
+                       href="/">首页</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/archives">ARCHIVES</a>
+                       href="/archives">归档</a>
                 </li>
             
                 <li class="drawer-menu-item flex-center">
                     <a class=""
-                       href="/about">ABOUT</a>
+                       href="/about">关于</a>
                 </li>
             
         </ul>
@@ -134,7 +134,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">Mac使用移动硬盘下载Android源码</span>
+            <span class="title-hover-animation">Mac 使用移动硬盘下载 Android 源码</span>
         </div>
 
         
@@ -182,22 +182,22 @@
         
 
         <div class="article-content markdown-body">
-            <p>别管看不看，额，主要看有没有时间：），先把Android源码搞下来。废话不多说，开搞。</p>
+            <p>别管看不看，额，主要看有没有时间：），先把 Android 源码搞下来。废话不多说，开搞。</p>
 <a id="more"></a>
 <h4 id="创建磁盘分区">创建磁盘分区</h4>
-<p>无奈Mac的磁盘已经成天的提示不够用，只好使用移动硬盘来下载。我是专门弄了一块硬盘存放Android源码，这样的话比较省心。上来直接格式化为大小写敏感的分区，也就是<strong>Mac OS扩展 区分大小写，日志式</strong>，为什么要区分大小写， 是因如果要编译Android源码的话，是需要所在分区对大小写敏感。</p>
-<h4 id="安装repo">安装<a class="link"   target="_blank" rel="noopener" href="https://source.android.com/source/developing" >repo<i class="fas fa-external-link-alt"></i></a></h4>
+<p>无奈 Mac 的磁盘已经成天的提示不够用，只好使用移动硬盘来下载。我是专门弄了一块硬盘存放 Android 源码，这样的话比较省心。上来直接格式化为大小写敏感的分区，也就是<strong>Mac OS 扩展 区分大小写，日志式</strong>，为什么要区分大小写， 是因如果要编译 Android 源码的话，是需要所在分区对大小写敏感。</p>
+<h4 id="安装 repo">安装<a class="link"   target="_blank" rel="noopener" href="https://source.android.com/source/developing">repo<i class="fas fa-external-link-alt"></i></a></h4>
 <ul>
-<li><code>mkdir ~/bin</code>  // 当前用户下创建bin目录</li>
+<li><code>mkdir ~/bin</code>  // 当前用户下创建 bin 目录</li>
 <li><code>PAHT=~/bin:$PATH</code>  // 加入到临时变量</li>
-<li><code>curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo</code>  // 下载repo到bin目录</li>
-<li><code>chmod a+x ~/bin/repo</code>  // 修改repo的权限。意思是给所有用户添加执行权限</li>
-<li><code>cd /Volumes/硬盘的名字</code>  // 进入到要下载源码的目录</li>
-<li><code>mkdir aosp</code>  //创建工作空间，名字看自己喜好</li>
+<li><code>curl https://storage.googleapis.com/git-repo-downloads/repo &gt; ~/bin/repo</code>  // 下载 repo 到 bin 目录</li>
+<li><code>chmod a+x ~/bin/repo</code>  // 修改 repo 的权限。意思是给所有用户添加执行权限</li>
+<li><code>cd /Volumes/ 硬盘的名字</code>  // 进入到要下载源码的目录</li>
+<li><code>mkdir aosp</code>  // 创建工作空间，名字看自己喜好</li>
 <li><code>cd aosp</code>  // 进入到工作空间</li>
 </ul>
-<h4 id="配置git">配置git</h4>
-<p>建议使用gmail邮箱。这个据说是为了以后更新源码方便，因为目前还没更新过，所以也不是很清楚到底有没有用。</p>
+<h4 id="配置 git">配置 git</h4>
+<p>建议使用 gmail 邮箱。这个据说是为了以后更新源码方便，因为目前还没更新过，所以也不是很清楚到底有没有用。</p>
 <ul>
 <li><code>git config --global user.name xxx</code></li>
 <li><code>git config --global user.email xxx@xxx.xx</code></li>
@@ -205,23 +205,23 @@
 <h4 id="配置清华源（可选）">配置清华源（可选）</h4>
 <p>不方便科学上网，或者为了提高速度，可以配置清华源。</p>
 <ul>
-<li>加一个环境变量，使用bash就在.bashrc，使用zsh就在.zshrc文件里加入<code>'export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'</code></li>
+<li>加一个环境变量，使用 bash 就在.bashrc，使用 zsh 就在.zshrc 文件里加入<code>'export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'</code></li>
 </ul>
-<h4 id="初始化repo，同步代码">初始化repo，同步代码</h4>
+<h4 id="初始化 repo，同步代码">初始化 repo，同步代码</h4>
 <ul>
-<li><code>cd /Volumes/aosp</code> 进入到第2步建立好的目录</li>
-<li><a class="link"   target="_blank" rel="noopener" href="https://android.googlesource.com/platform/manifest" >Android版本<i class="fas fa-external-link-alt"></i></a>，可以去这里看所有的分支。</li>
+<li><code>cd /Volumes/aosp</code> 进入到第 2 步建立好的目录</li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://android.googlesource.com/platform/manifest">Android 版本<i class="fas fa-external-link-alt"></i></a>，可以去这里看所有的分支。</li>
 <li><code>repo init '$ repo init -u https://aosp.tuna.tsinghua.edu.cn/platform/manifest -b android-11.0.0_r9' </code>这里选择当前最新版本分支</li>
 <li>初始化完成后，<code>repo sync</code> 等吧。</li>
-<li>下载完成后，大概占用了50多G空间，解压完成后大概占用110多G的空间。只能说，真TM大啊。</li>
+<li>下载完成后，大概占用了 50 多 G 空间，解压完成后大概占用 110 多 G 的空间。只能说，真 TM 大啊。</li>
 </ul>
 <blockquote>
-<p>其实大部分的教程也是基于<a class="link"   target="_blank" rel="noopener" href="https://source.android.com/source/downloading" >官方教程<i class="fas fa-external-link-alt"></i></a>进行的拓展，加了很多图文，我觉得对于一个开发者来说，其实有些太过于详细了。</p>
+<p>其实大部分的教程也是基于 <a class="link"   target="_blank" rel="noopener" href="https://source.android.com/source/downloading"> 官方教程 <i class="fas fa-external-link-alt"></i></a> 进行的拓展，加了很多图文，我觉得对于一个开发者来说，其实有些太过于详细了。</p>
 </blockquote>
 <blockquote>
 <p>特别鸣谢<br>
-<a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/u012528526/article/details/87994711" >https://blog.csdn.net/u012528526/article/details/87994711<i class="fas fa-external-link-alt"></i></a><br>
-<a class="link"   target="_blank" rel="noopener" href="https://juejin.cn/post/6844903832028184590" >https://juejin.cn/post/6844903832028184590<i class="fas fa-external-link-alt"></i></a></p>
+https://blog.csdn.net/u012528526/article/details/87994711<br>
+https://juejin.cn/post/6844903832028184590</p>
 </blockquote>
 
         </div>
@@ -230,14 +230,14 @@
             <div class="post-copyright-info">
                 <div class="article-copyright-info-container">
     <ul>
-        <li>Post title：Mac使用移动硬盘下载Android源码</li>
-        <li>Post author：Yuming</li>
-        <li>Create time：2021-02-16 23:57:39</li>
+        <li>本文标题：Mac 使用移动硬盘下载 Android 源码</li>
+        <li>本文作者：Yuming</li>
+        <li>创建时间：2021-02-16 23:57:39</li>
         <li>
-            Post link：https://yum1ng.cn/2021/02/16/Mac使用移动硬盘下载Android源码/
+            本文链接：https://yum1ng.cn/2021/02/16/Mac使用移动硬盘下载Android源码/
         </li>
         <li>
-            Copyright Notice：All articles in this blog are licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> unless stating additionally.
+            版权声明：本博客所有文章除特别声明外，均采用 <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">BY-NC-SA</a> 许可协议。转载请注明出处！
         </li>
     </ul>
 </div>
@@ -258,7 +258,7 @@
                             </span>
                             <span class="title flex-center">
                                 <span class="post-nav-title-item">儿子语录</span>
-                                <span class="post-nav-item">Prev posts</span>
+                                <span class="post-nav-item">上一篇</span>
                             </span>
                         </a>
                     </div>
@@ -270,8 +270,8 @@
                            href="/2021/02/12/Mac%E4%BD%BF%E7%94%A8Hexo-Github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">Mac使用Hexo+Github搭建个人博客</span>
-                                <span class="post-nav-item">Next posts</span>
+                                <span class="post-nav-title-item">Mac 使用 Hexo+Github 搭建个人博客</span>
+                                <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
                               <i class="fas fa-chevron-right"></i>
@@ -287,7 +287,7 @@
                 <div class="comments-container">
     <div id="comment-anchor"></div>
     <div class="comment-area-title">
-        <i class="fas fa-comments">&nbsp;Comments</i>
+        <i class="fas fa-comments">&nbsp;评论</i>
     </div>
     
 
@@ -307,7 +307,7 @@
                     avatar: 'wavatar',
                     enableQQ: true,
                     placeholder: '来了，不整几杯？',
-                    lang: 'cn'.toLowerCase()
+                    lang: 'zh-CN'.toLowerCase()
                 });
 
                 function getAuthor(language) {
@@ -386,18 +386,18 @@
             <div class="website-count info-item">
                 
                     <span id="busuanzi_container_site_uv">
-                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
                     </span>
                 
                 
                     <span id="busuanzi_container_site_pv">
-                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
                     </span>
                 
             </div>
         
         <div class="theme-info info-item">
-            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.0</a>
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.0</a>
         </div>
     </div>
 </footer>
@@ -475,7 +475,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA"><span class="nav-number">1.</span> <span class="nav-text">创建磁盘分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85repo"><span class="nav-number">2.</span> <span class="nav-text">安装repo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEgit"><span class="nav-number">3.</span> <span class="nav-text">配置git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%8E%E6%BA%90%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">配置清华源（可选）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96repo%EF%BC%8C%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">初始化repo，同步代码</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA"><span class="nav-number">1.</span> <span class="nav-text">创建磁盘分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%20repo"><span class="nav-number">2.</span> <span class="nav-text">安装repo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%20git"><span class="nav-number">3.</span> <span class="nav-text">配置 git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%8E%E6%BA%90%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">配置清华源（可选）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%20repo%EF%BC%8C%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">初始化 repo，同步代码</span></a></li></ol>
     </div>
 </div>
         </aside>
@@ -497,7 +497,7 @@
                 <input autocomplete="off"
                        autocorrect="off"
                        autocapitalize="off"
-                       placeholder="Search..."
+                       placeholder="搜索..."
                        spellcheck="false"
                        type="search"
                        class="search-input"
