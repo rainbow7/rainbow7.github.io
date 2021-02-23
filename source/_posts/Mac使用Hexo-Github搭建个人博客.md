@@ -24,7 +24,7 @@ npm install  // 安装
 hexo new 文件名 // 创建新的文章，文章会以markdown格式保存在blog/source/_post中
 hexo server  // 启动本地服务，这步执行完成之后，就可以在本地预览页面了，链接会在终端中输出，按住ctrl就可以点击查看了
 ```
-    
+
 经过以上两个步骤就完成了Hexo的安装，已经可以在本地浏览生成的页面了。下面将介绍如何配置Github Pages，以便将我们的页面上传到Github。
 
 Github Pages的配置。Github当然是依赖Git的了，所以要先安装好Git工具。
@@ -33,11 +33,11 @@ Github Pages的配置。Github当然是依赖Git的了，所以要先安装好Gi
 配置Github Pages，首先需要开通Github,然后是设置SSH key，如果没有的话。
 
 补充，这里简单说下配置多个SSH key。比如公司的Git Lab仓库与我们的自己的Github分别使用不同的配置。
-  
+
    1.生成新的密钥  `ssh-keygen -t rsa -C email // 将email替换为你要使用的email，回车后输入保存的文件名，如id_rsa_github`
-  
+
    2.进入.shh文件夹，创建config文件  `vi config // 生成同时编辑config文件`
-   
+
    3.为不同的域配置不同的SSH key
        
 ```
@@ -81,6 +81,47 @@ hexo g -d  // 组合命令，生成+发布
 域名，以阿里云为例，点击添加记录，按以下配置添加，把记录值改为你的地址。然后在Repository添加一个文件CNAME，文件的内容是你的域名。最后在Repository的Setting中，Github Pages那里添加你的域名，点击保存。现在已经可以使用你自己的域名来访问站点了。各配置如下图所示
 ![](/assets/blogImage/ali_domain_setting.png)
 
+替换Markdown插件
+
+hexo默认的markdown插件为`hexo-renderer-marked`不是很给力。所以将它换为更强力的[hexo-renderer-markdown-it](https://github.com/hexojs/hexo-renderer-markdown-it)，至于怎么个强力法，用了才知道。先安利一个非常简介好用的markdwon编辑器[typora](https://typora.io/)。下面简单记录下替换步骤。
+
+```xml
+$ npm un hexo-renderer-marked --save  # 卸载原来的
+$ npm i hexo-renderer-markdown-it --save  #安装新的
+```
+
+配置，具体的含意可以自行学习
+
+```yaml
+# Markdown-it config
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-abbr      #缩写插件
+    - markdown-it-footnote  #脚注插件
+    - markdown-it-ins       #插入插件（下划线插件）
+    - markdown-it-sub       #下标插件
+    - markdown-it-sup       #上标插件
+    - markdown-it-emoji     #emoji插件
+    - markdown-it-container #内容块
+    - markdown-it-deflist   #Definition list (<dl>) tag
+    - markdown-it-ins       #++inserted++ => <ins>inserted</ins>
+    - markdown-it-mark      #<mark> tag
+  anchors:                  #锚
+    level: 2                #最小对哪一级标题生效，对应H1-H6
+    collisionSuffix: 'v'
+    permalink: false        #链接，如果设置为true，点击后，会将其滚动到页面的最上方，
+    permalinkClass: header-anchor
+    permalinkSymbol: ¶      #锚的标记，说的直白点儿，就是你点击这个东西，会发生上面所说的滚动
+```
+
+这里说一下`anchors`，锚，开始时没搞清楚，还给作者提了个[Issues](https://github.com/XPoet/hexo-theme-keep/issues/64)
 
 记录使用hexo过程中遇到的一些问题，为了保持整个目录的整洁，就不新建文章了。
 

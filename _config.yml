@@ -9,7 +9,7 @@ description: '' # 用于被搜索引擎捕获时告知其站点的基本信息
 keywords:  # 网站关键词
 author: Yuming # 作者名称,会显示在页面下方
 email: xiaosevn@gmail.com
-language: en # 网站语言，主要看主题是否支持，同时具体书写方式也因主题而异
+language: cn # 网站语言，主要看主题是否支持，同时具体书写方式也因主题而异
 timezone: 'Asia/Shanghai' # 设置时区，中国可以直接写成 Asia/Shanghai
 
 # URL
@@ -152,6 +152,6 @@ markdown:
   anchors:                  #锚
     level: 2
     collisionSuffix: 'v'
-    permalink: true
+    permalink: false
     permalinkClass: header-anchor
     permalinkSymbol: ¶

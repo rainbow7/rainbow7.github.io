@@ -8,11 +8,11 @@ tags: Android
 
 <!-- more -->
 
-### 创建磁盘分区
+#### 创建磁盘分区
 
 无奈Mac的磁盘已经成天的提示不够用，只好使用移动硬盘来下载。我是专门弄了一块硬盘存放Android源码，这样的话比较省心。上来直接格式化为大小写敏感的分区，也就是**Mac OS扩展 区分大小写，日志式**，为什么要区分大小写， 是因如果要编译Android源码的话，是需要所在分区对大小写敏感。
 
-### 安装[repo](https://source.android.com/source/developing)
+#### 安装[repo](https://source.android.com/source/developing)
 
 * `mkdir ~/bin`  // 当前用户下创建bin目录
 * `PAHT=~/bin:$PATH`  // 加入到临时变量
@@ -22,19 +22,19 @@ tags: Android
 * `mkdir aosp`  //创建工作空间，名字看自己喜好
 * `cd aosp`  // 进入到工作空间
 
-### 配置git
+#### 配置git
 
 建议使用gmail邮箱。这个据说是为了以后更新源码方便，因为目前还没更新过，所以也不是很清楚到底有没有用。
 
 * `git config --global user.name xxx`
 * `git config --global user.email xxx@xxx.xx`
   
-### 配置清华源（可选）
+#### 配置清华源（可选）
 
 不方便科学上网，或者为了提高速度，可以配置清华源。
 * 加一个环境变量，使用bash就在.bashrc，使用zsh就在.zshrc文件里加入`'export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'` 
   
-### 初始化repo，同步代码
+#### 初始化repo，同步代码
 
 * `cd /Volumes/aosp` 进入到第2步建立好的目录
 * [Android版本](https://android.googlesource.com/platform/manifest)，可以去这里看所有的分支。
