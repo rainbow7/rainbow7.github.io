@@ -9,7 +9,7 @@ description: '' # 用于被搜索引擎捕获时告知其站点的基本信息
 keywords:  # 网站关键词
 author: Yuming # 作者名称,会显示在页面下方
 email: xiaosevn@gmail.com
-language: cn # 网站语言，主要看主题是否支持，同时具体书写方式也因主题而异
+language: zh-CN # 网站语言，主要看主题是否支持，同时具体书写方式也因主题而异
 timezone: 'Asia/Shanghai' # 设置时区，中国可以直接写成 Asia/Shanghai
 
 # URL
@@ -35,6 +35,7 @@ skip_render:
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
+auto_spacing: true
 titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
@@ -135,7 +136,7 @@ markdown:
     html: true
     xhtmlOut: false
     breaks: true
-    linkify: true
+    linkify: false
     typographer: true
     quotes: '“”‘’'
   plugins:
