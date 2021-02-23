@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cn">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.4.0/source/css/font-awesome.min.css">
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
-    KEEP.hexo_config = {"hostname":"coolcoder.fun","root":"/","language":"en","path":"search.xml"};
+    KEEP.hexo_config = {"hostname":"coolcoder.fun","root":"/","language":"cn","path":"search.xml"};
     KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":false,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"trigger":"auto","unescape":false,"preload":true},"code_copy":{"enable":true,"style":"mac"},"side_tools":{"enable":true},"pjax":{"enable":false},"lazyload":{"enable":false},"version":"3.4.0"};
     KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days age","week":"%s weeks age","month":"%s months age","year":"%s years age"};
   </script>
@@ -184,9 +184,9 @@
         <div class="article-content markdown-body">
             <p>别管看不看，额，主要看有没有时间：），先把Android源码搞下来。废话不多说，开搞。</p>
 <a id="more"></a>
-<h3 id="创建磁盘分区"><a class="header-anchor" href="#创建磁盘分区">¶</a>创建磁盘分区</h3>
+<h4 id="创建磁盘分区">创建磁盘分区</h4>
 <p>无奈Mac的磁盘已经成天的提示不够用，只好使用移动硬盘来下载。我是专门弄了一块硬盘存放Android源码，这样的话比较省心。上来直接格式化为大小写敏感的分区，也就是<strong>Mac OS扩展 区分大小写，日志式</strong>，为什么要区分大小写， 是因如果要编译Android源码的话，是需要所在分区对大小写敏感。</p>
-<h3 id="安装repo"><a class="header-anchor" href="#安装repo">¶</a>安装<a class="link"   target="_blank" rel="noopener" href="https://source.android.com/source/developing" >repo<i class="fas fa-external-link-alt"></i></a></h3>
+<h4 id="安装repo">安装<a class="link"   target="_blank" rel="noopener" href="https://source.android.com/source/developing" >repo<i class="fas fa-external-link-alt"></i></a></h4>
 <ul>
 <li><code>mkdir ~/bin</code>  // 当前用户下创建bin目录</li>
 <li><code>PAHT=~/bin:$PATH</code>  // 加入到临时变量</li>
@@ -196,18 +196,18 @@
 <li><code>mkdir aosp</code>  //创建工作空间，名字看自己喜好</li>
 <li><code>cd aosp</code>  // 进入到工作空间</li>
 </ul>
-<h3 id="配置git"><a class="header-anchor" href="#配置git">¶</a>配置git</h3>
+<h4 id="配置git">配置git</h4>
 <p>建议使用gmail邮箱。这个据说是为了以后更新源码方便，因为目前还没更新过，所以也不是很清楚到底有没有用。</p>
 <ul>
 <li><code>git config --global user.name xxx</code></li>
 <li><code>git config --global user.email xxx@xxx.xx</code></li>
 </ul>
-<h3 id="配置清华源（可选）"><a class="header-anchor" href="#配置清华源（可选）">¶</a>配置清华源（可选）</h3>
+<h4 id="配置清华源（可选）">配置清华源（可选）</h4>
 <p>不方便科学上网，或者为了提高速度，可以配置清华源。</p>
 <ul>
 <li>加一个环境变量，使用bash就在.bashrc，使用zsh就在.zshrc文件里加入<code>'export REPO_URL='https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/'</code></li>
 </ul>
-<h3 id="初始化repo，同步代码"><a class="header-anchor" href="#初始化repo，同步代码">¶</a>初始化repo，同步代码</h3>
+<h4 id="初始化repo，同步代码">初始化repo，同步代码</h4>
 <ul>
 <li><code>cd /Volumes/aosp</code> 进入到第2步建立好的目录</li>
 <li><a class="link"   target="_blank" rel="noopener" href="https://android.googlesource.com/platform/manifest" >Android版本<i class="fas fa-external-link-alt"></i></a>，可以去这里看所有的分支。</li>
@@ -307,7 +307,7 @@
                     avatar: 'wavatar',
                     enableQQ: true,
                     placeholder: '来了，不整几杯？',
-                    lang: 'en'.toLowerCase()
+                    lang: 'cn'.toLowerCase()
                 });
 
                 function getAuthor(language) {
@@ -475,7 +475,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA"><span class="nav-number">1.</span> <span class="nav-text">创建磁盘分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85repo"><span class="nav-number">2.</span> <span class="nav-text">安装repo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEgit"><span class="nav-number">3.</span> <span class="nav-text">配置git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%8E%E6%BA%90%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">配置清华源（可选）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96repo%EF%BC%8C%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">初始化repo，同步代码</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA"><span class="nav-number">1.</span> <span class="nav-text">创建磁盘分区</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%89%E8%A3%85repo"><span class="nav-number">2.</span> <span class="nav-text">安装repo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AEgit"><span class="nav-number">3.</span> <span class="nav-text">配置git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%85%8D%E7%BD%AE%E6%B8%85%E5%8D%8E%E6%BA%90%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">配置清华源（可选）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96repo%EF%BC%8C%E5%90%8C%E6%AD%A5%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">初始化repo，同步代码</span></a></li></ol>
     </div>
 </div>
         </aside>
