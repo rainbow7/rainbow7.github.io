@@ -56,6 +56,18 @@
 ]]></content>
   </entry>
   <entry>
+    <title>使用 CI 部署博客</title>
+    <url>/2021/02/23/%E4%BD%BF%E7%94%A8CI%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>工欲善其事，必先利其器。</p>
+<a id="more"></a>
+<p>使用持续集成系统部署博客，会省去不少工作，也方便在没有 hexo 的环境下对博客内容进行修改。</p>
+<p><a class="link"   href="https://keep.xpoet.cn/2020/11/%E4%BD%BF%E7%94%A8-Travis-CI-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">Xpote<i class="fas fa-external-link-alt"></i></a>老哥（应该不会是小姐姐吧）已经写了非常详细的教程了。这里就不再重复了。本博客的主题也是使用他（她）的。非常简洁、美观、实用。真的非常感谢！</p>
+<p>最后提一点要注意 <code>.travis.yml</code> 配置文件中 <code>token</code> 变量的值是，是 Tarvis 系统上面配置的 <code>Environment Variables</code> 的 name。可能是我比较傻，当时用 token 值把这个替换了。结果部署的时候提示没权限…</p>
+<p><img src="/assets/blogImage/travis_config.png" alt=""></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">on:</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">xxx</span>         				<span class="comment"># 工作分支（博客源码的分支）</span></span><br><span class="line">  <span class="attr">strategy:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">provider:</span> <span class="string">pages</span></span><br><span class="line">  <span class="attr">skip_cleanup:</span> <span class="literal">true</span>            <span class="comment"># 跳过清理</span></span><br><span class="line">  <span class="attr">token:</span> <span class="string">$GH_TOKEN</span>              <span class="comment"># GitHub Token 变量</span></span><br><span class="line">  <span class="attr">keep_history:</span> <span class="literal">true</span>            <span class="comment"># 保持推送记录，以增量提交的方式</span></span><br><span class="line">  <span class="attr">local_dir:</span> <span class="string">public</span>             <span class="comment"># 需要推送到 gh-pages 分支的静态文件目录</span></span><br><span class="line">  <span class="attr">target_branch:</span> <span class="string">xxx</span>            <span class="comment"># 构建好的博客分支，也就是对外提供静态页面的分支</span></span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
     <title>Mac 使用移动硬盘下载 Android 源码</title>
     <url>/2021/02/16/Mac%E4%BD%BF%E7%94%A8%E7%A7%BB%E5%8A%A8%E7%A1%AC%E7%9B%98%E4%B8%8B%E8%BD%BDAndroid%E6%BA%90%E7%A0%81/</url>
     <content><![CDATA[<p>别管看不看，额，主要看有没有时间：），先把 Android 源码搞下来。废话不多说，开搞。</p>
@@ -103,18 +115,6 @@ https://juejin.cn/post/6844903832028184590</p>
       <tags>
         <tag>Android</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>使用 CI 部署博客</title>
-    <url>/2021/02/23/%E4%BD%BF%E7%94%A8CI%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<p>工欲善其事，必先利其器。</p>
-<a id="more"></a>
-<p>使用持续集成系统部署博客，会省去不少工作，也方便在没有 hexo 的环境下对博客内容进行修改。</p>
-<p><a class="link"   href="https://keep.xpoet.cn/2020/11/%E4%BD%BF%E7%94%A8-Travis-CI-%E8%87%AA%E5%8A%A8%E9%83%A8%E7%BD%B2-Hexo-%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2/">Xpote<i class="fas fa-external-link-alt"></i></a>老哥（应该不会是小姐姐吧）已经写了非常详细的教程了。这里就不再重复了。本博客的主题也是使用他（她）的。非常简洁、美观、实用。真的非常感谢！</p>
-<p>最后提一点要注意 <code>.travis.yml</code> 配置文件中 <code>token</code> 变量的值是，是 Tarvis 系统上面配置的 <code>Environment Variables</code> 的 name。可能是我比较傻，当时用 token 值把这个替换了。结果部署的时候提示没权限…</p>
-<p><img src="/assets/blogImage/travis_config.png" alt=""></p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">on:</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">xxx</span>         				<span class="comment"># 工作分支（博客源码的分支）</span></span><br><span class="line">  <span class="attr">strategy:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">provider:</span> <span class="string">pages</span></span><br><span class="line">  <span class="attr">skip_cleanup:</span> <span class="literal">true</span>            <span class="comment"># 跳过清理</span></span><br><span class="line">  <span class="attr">token:</span> <span class="string">$GH_TOKEN</span>              <span class="comment"># GitHub Token 变量</span></span><br><span class="line">  <span class="attr">keep_history:</span> <span class="literal">true</span>            <span class="comment"># 保持推送记录，以增量提交的方式</span></span><br><span class="line">  <span class="attr">local_dir:</span> <span class="string">public</span>             <span class="comment"># 需要推送到 gh-pages 分支的静态文件目录</span></span><br><span class="line">  <span class="attr">target_branch:</span> <span class="string">xxx</span>            <span class="comment"># 构建好的博客分支，也就是对外提供静态页面的分支</span></span><br></pre></td></tr></table></figure>
-]]></content>
   </entry>
   <entry>
     <title>儿子语录</title>
