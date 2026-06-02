@@ -2,7 +2,7 @@ baseURL = "https://rainbow7.github.io/"
 locale = "zh-cn"
 defaultContentLanguage = "zh-cn"
 title = "Yuming's Blog"
-theme = "even"
+theme = "PaperMod"
 
 enableRobotsTXT = true
 enableEmoji = true
@@ -19,60 +19,68 @@ paginate = 10
 
 [[menu.main]]
   name = "首页"
-  weight = 10
-  identifier = "home"
   url = "/"
+  weight = 10
 
 [[menu.main]]
   name = "归档"
+  url = "/archives/"
   weight = 20
-  identifier = "archives"
-  url = "/post/"
 
 [[menu.main]]
   name = "标签"
-  weight = 30
-  identifier = "tags"
   url = "/tags/"
+  weight = 30
 
 [[menu.main]]
   name = "分类"
-  weight = 40
-  identifier = "categories"
   url = "/categories/"
+  weight = 40
+
+[[menu.main]]
+  name = "搜索"
+  url = "/search/"
+  weight = 50
 
 [params]
-  version = "4.x"
-  debug = false
-  since = "2026"
-  logoTitle = "Yuming's Blog"
-  keywords = ["blog", "Hugo"]
+  env = "production"
   description = "Yuming 的个人博客"
+  keywords = ["blog", "Hugo"]
+  defaultTheme = "auto"
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowWordCount = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  disableSpecial1stPost = false
 
-  archivePaginate = 50
-  showArchiveCount = true
-  dateFormatToUse = "2006-01-02"
-  moreMeta = true
+  [params.homeInfoParams]
+    Title = "Hey there"
+    Content = "Welcome to Yuming's Blog"
 
-  toc = true
-  autoCollapseToc = false
-  fancybox = true
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/rainbow7"
 
-  postMetaInFooter = true
-  linkToMarkDown = false
+[params.cover]
+  hidden = false
+  hiddenInList = false
+  hiddenInSingle = false
 
-  highlightInClient = false
+[params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = ["title", "permalink", "summary", "content"]
 
-  customCSS = []
-  customJS = []
-
-  uglyURLs = false
-
-  [params.busuanzi]
-    enable = false
-
-  [params.social]
-    g-github = "https://github.com/rainbow7"
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
 
 [privacy]
   [privacy.googleAnalytics]
@@ -87,5 +95,6 @@ paginate = 10
     unsafe = true
   [markup.highlight]
     style = "monokai"
+    noClasses = false
     lineNos = true
     guessSyntax = true
