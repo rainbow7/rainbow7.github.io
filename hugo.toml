@@ -76,6 +76,11 @@ enableEmoji = true
   pageRef = "/tags"
   weight = 30
 
+[[menus.main]]
+  name = "关于"
+  url = "/about/"
+  weight = 40
+
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true
