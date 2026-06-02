@@ -1,100 +1,83 @@
 baseURL = "https://rainbow7.github.io/"
-locale = "zh-cn"
+theme = "mana"
 defaultContentLanguage = "zh-cn"
-title = "Yuming's Blog"
-theme = "PaperMod"
 
+hasCJKLanguage = true
 enableRobotsTXT = true
 enableEmoji = true
-hasCJKLanguage = true
-paginate = 10
 
-[author]
-  name = "Yuming"
+[pagination]
+  pageSize = 10
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 6
+    ordered = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    noClasses = false
+    style = "catppuccin-macchiato"
+
+[outputs]
+  home = ["HTML", "JSON"]
 
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
   filename = "sitemap.xml"
 
-[[menu.main]]
+[params]
+  enableIntegrity = false
+  relatedPostsCount = 3
+  description = "Yuming 的个人博客"
+  author = "Yuming"
+  heroTitleLine1 = "YUMING'S BLOG"
+  heroTitleLine2 = "Code & Life"
+  footerText = "Built with Hugo and Mana theme"
+
+  [params.social]
+    github = "https://github.com/rainbow7"
+
+  [params.buyMeACoffee]
+    enabled = false
+
+  [params.codeHighlight]
+    darkTheme = "catppuccin-macchiato"
+    lightTheme = "catppuccin-frappe"
+
+  [params.copyright]
+    startYear = 2026
+    owner = "Yuming"
+
+  [params.admonitions]
+    alertStyle = "favicon"
+
+[[menus.main]]
   name = "首页"
-  url = "/"
+  pageRef = "/"
   weight = 10
 
-[[menu.main]]
-  name = "归档"
-  url = "/archives/"
+[[menus.main]]
+  name = "文章"
+  pageRef = "/posts"
   weight = 20
 
-[[menu.main]]
+[[menus.main]]
   name = "标签"
-  url = "/tags/"
+  pageRef = "/tags"
   weight = 30
-
-[[menu.main]]
-  name = "分类"
-  url = "/categories/"
-  weight = 40
-
-[[menu.main]]
-  name = "搜索"
-  url = "/search/"
-  weight = 50
-
-[params]
-  env = "production"
-  description = "Yuming 的个人博客"
-  keywords = ["blog", "Hugo"]
-  defaultTheme = "auto"
-  ShowReadingTime = true
-  ShowShareButtons = false
-  ShowPostNavLinks = true
-  ShowBreadCrumbs = true
-  ShowCodeCopyButtons = true
-  ShowWordCount = true
-  ShowRssButtonInSectionTermList = true
-  UseHugoToc = true
-  disableSpecial1stPost = false
-
-  [params.homeInfoParams]
-    Title = "Hey there"
-    Content = "Welcome to Yuming's Blog"
-
-  [[params.socialIcons]]
-    name = "github"
-    url = "https://github.com/rainbow7"
-
-[params.cover]
-  hidden = false
-  hiddenInList = false
-  hiddenInSingle = false
-
-[params.fuseOpts]
-  isCaseSensitive = false
-  shouldSort = true
-  location = 0
-  distance = 1000
-  threshold = 0.4
-  minMatchCharLength = 0
-  keys = ["title", "permalink", "summary", "content"]
-
-[outputs]
-  home = ["HTML", "RSS", "JSON"]
 
 [privacy]
   [privacy.googleAnalytics]
     anonymizeIP = true
   [privacy.youtube]
     privacyEnhanced = true
-
-[markup]
-  [markup.tableOfContents]
-    startLevel = 1
-  [markup.goldmark.renderer]
-    unsafe = true
-  [markup.highlight]
-    style = "monokai"
-    noClasses = false
-    lineNos = true
-    guessSyntax = true
